@@ -7,8 +7,9 @@ body {
 
 .header {
   display: grid;
-  grid-template-columns: 3fr 1fr 3fr;
-  padding: 92px 50px;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  padding: 92px 50px 96px;
   font-size: 18px;
 }
 
@@ -17,8 +18,6 @@ body {
 
 .header_links-list {
   display: flex;
-  align-items: center;
-  height: 100%;
 }
 
 .header__links-list-item {
@@ -37,7 +36,6 @@ body {
 
 .header__link {
   display: inline-block;
-  line-height: 1.1;
   text-decoration: none;
   border-bottom: 1px solid black;
 }
@@ -47,22 +45,22 @@ body {
 }
 
 .header__logo {
+  display: block;
+  min-width: 136px;
   font-size: 0;
 }
 
 .header__logo-image {
-  max-height: 105px;
 }
 
 .address {
-  max-width: 240px;
   font-style: normal;
+  line-height: 1.35;
 }
 
 .header__address {
-  line-height: 1.35;
-  align-self: center;
   justify-self: end;
+  max-width: 240px;
 }
 
 .header__address a {
@@ -70,7 +68,98 @@ body {
   border-bottom: 1px solid black;
 }
 
-.main {
+/* .main {
+} */
+
+.cover {
+  position: relative;
+  z-index: -1;
+  background-image: url(../images/cover.jpg);
+  padding: 50px;
+  text-transform: uppercase;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: #000000;
+  opacity: 0.6;
+}
+
+.cover__title {
+  display: grid;
+  position: relative;
+  z-index: 1;
+  gap: 20px;
+  padding-top: 116px;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 1.15;
+  color: #ffffff;
+}
+
+/* .aligned-text {
+} */
+
+.aligned-text_center {
+  justify-self: center;
+}
+
+.aligned-text_right {
+  justify-self: end;
+}
+
+.letter-spacing-extended {
+  letter-spacing: 0.3em;
+}
+
+.no-letter-spacing {
+  letter-spacing: 0;
+}
+
+.cover__description {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  justify-content: space-between;
+  margin-top: 106px;
+}
+
+.cover__description-text {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.27;
+  color: #ffffff;
+  word-spacing: 18px;
+  align-self: center;
+  padding-top: 4px;
+}
+
+.cover__description-text span:first-child {
+  word-spacing: 20px;
+}
+
+.cover__description-text span:last-child {
+  word-spacing: 19px;
+}
+
+.bet-button {
+  width: 256px;
+  height: 51px;
+  padding: 0;
+  border: 1px solid white;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 .footer {
